@@ -1,11 +1,13 @@
+# -- TO RUN ALL COMANDS IT'S NECCESARY TO BE ON 'source' FOLDER
 
-# -- Run SAST
+# -- Compile
+javac -g source/SQLvulnerability.java
 
-veracode sast win-xpsp2-jvm1.4-javac-1.4/SQLvulnerability.jar --emit-stack-dump --out results.json
+# -- Run SAST (Pipeline Scan) - This command uses Veracode CLI option for Pipeline Scan
+../../veracode sast source/SQLvulnerability.class --emit-stack-dump --out results.json --prettyprint
 
 # -- Run fix
-
-veracode fix source/SQLvulnerability.java
+../../veracode fix source/SQLvulnerability.java
 
 # -- Recompile
 
