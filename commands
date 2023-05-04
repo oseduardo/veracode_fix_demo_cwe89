@@ -1,0 +1,21 @@
+
+# -- Run SAST
+
+veracode sast win-xpsp2-jvm1.4-javac-1.4/SQLvulnerability.jar --emit-stack-dump --out results.json
+
+# -- Run fix
+
+veracode fix source/SQLvulnerability.java
+
+# -- Recompile
+
+javac source/SQLvulnerability.java
+
+# -- Run SAST on new class file
+
+veracode sast source/SQLvulnerability.class --emit-stack-dump --out results.json
+
+# -- Reset the demo (restore the source file)
+
+cp source/SQLvulnerability.java.backup source/SQLvulnerability.java
+
