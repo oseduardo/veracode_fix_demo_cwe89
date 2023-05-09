@@ -1,6 +1,9 @@
 # -- TO RUN ALL COMANDS IT'S NECCESARY TO BE ON 'source' FOLDER
 # -- IT A PRE-REQUISITE TO HAVE A 'veracode_CLI' FOLDER AT THE SAME LEVEL OF LOCAL GIT REPO FOLDER, WITH THE TOOL INSTALLED
 
+# -- Clear cache
+../veracode_CLI/veracode clear
+
 # -- Compile
 javac -g source/SQLvulnerability.java
 
