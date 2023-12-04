@@ -9,7 +9,7 @@ javac -g source/SQLvulnerability.java
 # -- In my case I have pipeline scan installed in my veracode tools folder '~/tools/veracode'
 # -- Parameter -jo will generate the results.json file you will invoke when calling Veracode Fix
 # -- Parameter -esd will generate and will include stack dumps information of java app
-java -jar ~/tools/veracode/pipeline-scan.jar -f source/SQLvulnerability.class -jo true -esd true
+veracode static scan source/SQLvulnerability.class
 
 # -- Run fix
 veracode fix --results results.json source/SQLvulnerability.java
