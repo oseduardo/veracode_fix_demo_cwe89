@@ -1,0 +1,3 @@
+{
+    "veracode-scan.SAST Features.artifactGlob": ".verascan/*.{jar,js,dll,zip,tar,tar.gz,class}"
+}
